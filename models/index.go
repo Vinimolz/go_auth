@@ -22,7 +22,7 @@ func InitDB(cnf Config) {
 	dsn := fmt.Sprintf("host=%s user=%s password=%s dbname=%s port=%s sslmode=%s", 
 							cnf.Host, cnf.User,
 							cnf.Passwrod, cnf.DBName,
-							cnf.DBName, cnf.SSLMode)
+							cnf.Port, cnf.SSLMode)
 
 	db, err := gorm.Open(postgres.Open(dsn), &gorm.Config{})
 
